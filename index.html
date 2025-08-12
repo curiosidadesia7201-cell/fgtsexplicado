@@ -1,0 +1,466 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra o Poder do Seu FGTS por Apenas R$9,90!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0066cc, #003366);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .price-tag {
+            background-color: white;
+            color: #0066cc;
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 25px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .main-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d0e6ff;
+        }
+        
+        h2 {
+            color: #0066cc;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #0099ff;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #0066cc;
+            margin: 20px 0 15px;
+            font-size: 1.4rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background-color: #e6f7ff;
+            border-left: 5px solid #0099ff;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .benefit {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #b3e0ff;
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: block;
+            background: linear-gradient(135deg, #0066cc, #0099ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.6);
+        }
+        
+        .guarantee {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #0066cc;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .faq {
+            margin: 30px 0;
+        }
+        
+        .faq-item {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            background-color: #e6f7ff;
+            padding: 15px 20px;
+            font-weight: bold;
+            color: #0066cc;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        .testimonials {
+            margin: 30px 0;
+        }
+        
+        .testimonial {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0099ff;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #0066cc;
+            margin-top: 10px;
+            text-align: right;
+        }
+        
+        footer {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            border-radius: 30px 30px 0 0;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .price-tag {
+                font-size: 1.8rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DESCUBRA O PODER DO SEU FGTS!</h1>
+            <p class="subtitle">O guia completo que todo trabalhador CLT precisa conhecer para liberar o dinheiro esquecido no fundo de garantia</p>
+            <div class="price-tag">R$9,90</div>
+            <p>Aproveite por tempo limitado!</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="main-content">
+                <div class="card">
+                    <h2>ATENÇÃO, TRABALHADOR CLT!</h2>
+                    <p>Você sabia que milhões de brasileiros deixam dinheiro acumulando no FGTS sem saber como acessar? O Fundo de Garantia do Tempo de Serviço é um direito seu, mas a maioria dos trabalhadores desconhece suas reais possibilidades.</p>
+                    
+                    <div class="highlight">
+                        <p><strong>Imagine ter acesso a esse dinheiro esquecido</strong> para pagar dívidas, investir, comprar sua casa própria ou simplesmente ter uma reserva de emergência. Tudo isso é possível, mas você precisa saber como!</p>
+                    </div>
+                    
+                    <p>Após décadas de trabalho, seu FGTS pode representar uma quantia significativa que você nem imagina. A boa notícia é que existem várias formas legais de sacar esses recursos, muito além da demissão sem justa causa.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>O QUE VOCÊ VAI APRENDER NO GUIA COMPLETO</h2>
+                    <p>Nosso guia exclusivo de R$9,90 revela todos os segredos do FGTS que ninguém conta. Você vai descobrir:</p>
+                    
+                    <ul>
+                        <li><strong>As 10 situações em que você pode sacar seu FGTS</strong> - incluindo aposentadoria, doenças graves, compra da casa própria e muito mais</li>
+                        <li><strong>O novo sistema de saque-aniversário</strong> - como receber dinheiro todo ano no seu aniversário</li>
+                        <li><strong>Como verificar seu saldo exato</strong> e todas as suas contas vinculadas</li>
+                        <li><strong>Os erros mais comuns</strong> que fazem trabalhadores perderem direitos</li>
+                        <li><strong>Passo-a-passo para solicitar o saque</strong> de forma simples e segura</li>
+                        <li><strong>Como o FGTS rende</strong> e por que você não deve deixar esse dinheiro parado</li>
+                        <li><strong>Proteção contra penhoras</strong> - o que pode e o que não pode ser usado para pagar dívidas</li>
+                        <li><strong>As novas regras recentes</strong> que podem beneficiar você imediatamente</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p><strong>EXCLUSIVO:</strong> Incluímos uma tabela detalhada com os valores exatos que você pode sacar no saque-aniversário, dependendo do seu saldo atual!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>PERGUNTAS QUE VOCÊ PROVAVELMENTE TEM</h2>
+                    <div class="faq">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Posso sacar meu FGTS mesmo sem ser demitido?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! Existem várias situações além da demissão sem justa causa em que você pode sacar seu FGTS, como aposentadoria, doenças graves, compra da casa própria, idade avançada e outras hipóteses previstas em lei.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                O que é o saque-aniversário e como funciona?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>O saque-aniversário é uma modalidade opcional que permite ao trabalhador receber anualmente um percentual do saldo do FGTS no mês de seu aniversário. O valor varia conforme o saldo, podendo chegar a até 15% + valor fixo adicional para saldos acima de R$20.000.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Meu FGTS pode ser penhorado por dívidas?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>O FGTS é considerado absolutamente impenhorável por lei, mas há exceções importantes. Ele pode ser penhorado para pagamento de dívidas alimentares (como pensão alimentícia), mas não para outros tipos de dívidas, incluindo honorários advocatícios.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Como verifico meu saldo do FGTS?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Você pode verificar seu saldo do FGTS gratuitamente pelo aplicativo "Meu FGTS", no site da Caixa Econômica Federal, por SMS ou ligando para o atendimento da Caixa. É importante verificar regularmente para garantir que todos os depósitos estão sendo feitos corretamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>DEPOIMENTOS DE QUEM JÁ TRANSFORMOU SUA VIDA</h2>
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <p>"Comprei minha casa própria usando o saldo do FGTS que eu nem sabia que tinha! O guia me mostrou exatamente como fazer e em 3 meses já estava com as chaves na mão."</p>
+                            <p class="testimonial-author">- Maria Silva, 42 anos, São Paulo</p>
+                        </div>
+                        
+                        <div class="testimonial">
+                            <p>"Fui demitido durante a pandemia e não sabia que tinha direito ao FGTS. Com o dinheiro, paguei minhas dívidas e consegui me sustentar enquanto procurava um novo emprego."</p>
+                            <p class="testimonial-author">- João Oliveira, 35 anos, Rio de Janeiro</p>
+                        </div>
+                        
+                        <div class="testimonial">
+                            <p>"Descobri que tinha R$18.500 em contas antigas que a empresa não tinha depositado. O guia me ensinou como reivindicar e em 60 dias recebi todo o valor corrigido!"</p>
+                            <p class="testimonial-author">- Ana Costa, 48 anos, Belo Horizonte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="card">
+                    <h2>PRINCIPAIS BENEFÍCIOS</h2>
+                    <div class="benefits">
+                        <div class="benefit">
+                            <div class="benefit-icon">💰</div>
+                            <h3>Dinheiro Extra</h3>
+                            <p>Acesse recursos que você nem sabia que tinha direito</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon">🔒</div>
+                            <h3>Segurança</h3>
+                            <p>Informações 100% confiáveis baseadas na legislação atual</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon">📱</div>
+                            <h3>Praticidade</h3>
+                            <p>Passo-a-passo simples e direto para todos entenderem</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon">🛡️</div>
+                            <h3>Proteção</h3>
+                            <p>Evite fraudes e golpes com informações oficiais</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>PARA QUEM É ESSE GUIA?</h2>
+                    <p>Este guia é perfeito para você se:</p>
+                    <ul>
+                        <li>É trabalhador CLT com registro em carteira</li>
+                        <li>Nunca verificou seu saldo do FGTS</li>
+                        <li>Foi demitido recentemente</li>
+                        <li>Está planejando a aposentadoria</li>
+                        <li>Precisa de dinheiro para emergências</li>
+                        <li>Quer comprar sua casa própria</li>
+                        <li>Tem mais de 60 anos</li>
+                        <li>Simplesmente quer conhecer seus direitos</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>GARANTIA DE SATISFAÇÃO</h2>
+                    <p>Se em 7 dias você não achar que o guia valeu cada centavo, devolvemos seu dinheiro. Sem perguntas, sem burocracia.</p>
+                    
+                    <button class="cta-button">COMPRAR AGORA POR R$9,90</button>
+                    
+                    <p class="guarantee">🔒 Pagamento seguro • Suporte especializado • Atualizações gratuitas</p>
+                    
+                    <div class="highlight">
+                        <p><strong>OFERTA ESPECIAL:</strong> Os 100 primeiros compradores recebem um bônus exclusivo: "Planilha de Controle do FGTS" para acompanhar todos os seus depósitos!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>FGTS: Seu Direito, Seu Dinheiro</h3>
+            <p>Este material tem caráter informativo e educacional. As informações são baseadas na legislação vigente e podem sofrer alterações. Recomendamos sempre consultar fontes oficiais para decisões importantes.</p>
+            <p class="disclaimer">Este não é um site oficial da Caixa Econômica Federal ou do Governo Brasileiro. Não temos vínculo com essas instituições. O valor de R$9,90 refere-se ao guia informativo digital, não a qualquer serviço de saque do FGTS.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const span = question.querySelector('span');
+                
+                answer.classList.toggle('show');
+                span.textContent = answer.classList.contains('show') ? '−' : '+';
+            });
+        });
+        
+        // CTA button animation
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            alert('Obrigado pelo interesse! Em breve você será redirecionado para a página de pagamento.');
+        });
+    </script>
+</body>
+</html>
+```
